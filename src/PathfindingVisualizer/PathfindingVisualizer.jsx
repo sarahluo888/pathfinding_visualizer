@@ -73,14 +73,22 @@ export default class PathfindingVisualizer extends Component {
     this.animateDijkstra(visitedNodesInOrder, nodesInShortestPathOrder);
   }
 
+  resetGrid() {
+    const grid = getInitialGrid();
+    this.setState({ grid });
+  }
+
   render() {
     const {grid, mouseIsPressed} = this.state;
 
     return (
       <>
-        <button onClick={() => this.visualizeDijkstra()}>
+        <button className="my-custom-button" onClick={() => this.visualizeDijkstra()}>
           Visualize Dijkstra's Algorithm
         </button>
+        {/* <button className="refresh-button" onClick={() => this.resetGrid()}>
+          <img src="/Users/sarr/pathfinding_visualizer/public/refresh-icon.png" alt="Refresh Icon" />
+        </button> */}
         <div className="grid">
           {grid.map((row, rowIdx) => {
             return (
