@@ -39,7 +39,23 @@
     border: none; 
     cursor: pointer;
   } */
+  a {
+    text-decoration: none;
+  }
   
+  .tiny-image {
+    width: 43px; 
+    height: 43px;
+    margin-bottom: -10px;
+    margin-left: 25px;
+  }
+
+    
+  .tiny-image:hover {
+    border-radius: 100%;
+    box-shadow: 0px 5px 9px rgba(0, 0, 0, 0.2);
+  }
+
   .refresh-button:hover {
     background-color: #edeaee; /* Darker blue on hover */
   }

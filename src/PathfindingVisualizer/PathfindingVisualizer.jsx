@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import Node from './Node/Node';
+import Image from './github-mark.png';
 import {dijkstra, getNodesInShortestPathOrder} from '../algorithms/dijkstra';
 
 import './PathfindingVisualizer.css';
@@ -86,6 +87,9 @@ export default class PathfindingVisualizer extends Component {
         <button className="my-custom-button" onClick={() => this.visualizeDijkstra()}>
           Visualize Dijkstra's Algorithm
         </button>
+        <a href="https://github.com/sarahluo888/pathfinding_visualizer" target="_blank" rel="noopener noreferrer">
+          <img src={Image} alt="GitHub" className="tiny-image" />
+        </a>
         {/* <button className="refresh-button" onClick={() => this.resetGrid()}>
           <img src="/Users/sarr/pathfinding_visualizer/public/refresh-icon.png" alt="Refresh Icon" />
         </button> */}
